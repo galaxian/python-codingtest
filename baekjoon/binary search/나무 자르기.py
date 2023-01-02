@@ -12,6 +12,8 @@ while start <= end:
     for i in arr:
         if i > mid:
             wood += i - mid
+        if wood > m:
+            break
     if wood < m:
         end = mid - 1
     else:
