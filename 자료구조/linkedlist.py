@@ -28,12 +28,17 @@ class LinkedList:
             cnt += 1
         return node
 
+    def add_node(self, index, data):
+        new_node = Node(data)
+        if index == 0:
+            new_node.next = self.head
+            self.head = new_node
+            return
+        node = self.get_node(index - 1)
+        next_node = node.next
+        node.next = new_node
+        new_node.next = next_node
 
-Llist = LinkedList(0)
-Llist.append(1)
-Llist.append(2)
-Llist.print_all()
-print(Llist.get_node(1))
 
 
 
