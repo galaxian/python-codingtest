@@ -14,4 +14,11 @@ class LinkedList:
             cur = cur.next
         cur.next = Node(data)
 
+    def print_all(self):
+        cur = self.head
+        while cur is not None:
+            print(cur.data)
+            cur = cur.next
+
+
 
