@@ -39,7 +39,9 @@ class LinkedList:
         node.next = new_node
         new_node.next = next_node
 
-
-
-
-
+    def delete_node(self, index):
+        if index == 0:
+            self.head = self.head.next
+            return
+        node = self.get_node(index - 1)
+        node.next = node.next.next
