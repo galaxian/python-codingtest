@@ -17,3 +17,9 @@ class ArrayList:
         while idx < self.cnt:
             print(self.list[idx])
             idx += 1
+
+    def update(self, idx, data):
+        if idx < 0 or idx >= self.cnt:
+            print("유효한 인덱스가 아닙니다.")
+        else:
+            self.list[idx] = data
