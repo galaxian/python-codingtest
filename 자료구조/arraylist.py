@@ -23,3 +23,10 @@ class ArrayList:
             print("유효한 인덱스가 아닙니다.")
         else:
             self.list[idx] = data
+
+    def delete(self, idx):
+        if idx < 0 or idx >= self.cnt:
+            print("유효한 인덱스가 아닙니다.")
+        else:
+            self.list[idx] = None
+
