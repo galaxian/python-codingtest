@@ -11,3 +11,9 @@ class ArrayList:
         if idx < 0 or idx >= self.cnt:
             print("유효한 인덱스가 아닙니다.")
         print(self.list[idx])
+
+    def print_all(self):
+        idx = 0
+        while idx < self.cnt:
+            print(self.list[idx])
+            idx += 1
