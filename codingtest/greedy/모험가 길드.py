@@ -1,13 +1,14 @@
 n = int(input())
 fear = list(map(int, input().split(' ')))
-fear.sort(reverse=True)
+fear.sort()
 
-result = 0
+member = 0
+party = 0
 
-while fear:
-    if len(fear) < fear[0]:
-        break
-    fear = fear[fear[0]:]
-    result += 1
+for elem in fear:
+    member += 1
+    if member >= elem:
+        party += 1
+        member = 0
 
-print(result)
+print(party)
