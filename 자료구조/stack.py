@@ -11,9 +11,16 @@ class Stack:
         self.head = new_head
 
     def pop(self):
+        if self.is_empty():
+            return "stack is empty"
         delete_head = self.head
         self.head = self.head.next
         return delete_head
 
     def peak(self):
+        if self.is_empty():
+            return "stack is empty"
         return self.head.data
+
+    def is_empty(self):
+        return self.head is None
