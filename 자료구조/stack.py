@@ -9,3 +9,8 @@ class Stack:
         new_head = Node(value)
         new_head.next = self.head
         self.head = new_head
+
+    def pop(self):
+        delete_head = self.head
+        self.head = self.head.next
+        return delete_head
