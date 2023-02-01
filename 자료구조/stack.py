@@ -14,3 +14,6 @@ class Stack:
         delete_head = self.head
         self.head = self.head.next
         return delete_head
+
+    def peak(self):
+        return self.head.data
