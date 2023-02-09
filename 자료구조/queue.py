@@ -14,6 +14,11 @@ class Queue:
         self.head.next = new_node
         self.tail = new_node
 
+    def dequeue(self):
+        delete_head = self.head
+        self.head = self.head.next
+        return delete_head.data
+
     def is_empty(self):
         return self.head is None
 
