@@ -19,6 +19,9 @@ class Queue:
         self.head = self.head.next
         return delete_head.data
 
+    def peek(self):
+        return self.head.data
+
     def is_empty(self):
         return self.head is None
 
