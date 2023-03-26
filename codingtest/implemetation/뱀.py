@@ -24,7 +24,7 @@ q = [(x, y)]
 while True:
     nx = x + dx[direction]
     ny = y + dy[direction]
-    if 1 <= nx <= n and 1 <= ny <= n and arr[nx] != 2:
+    if 1 <= nx <= n and 1 <= ny <= n and arr[nx][ny] != 2:
         if arr[nx][ny] == 0:
             arr[nx][ny] = 2
             q.append((nx, ny))
