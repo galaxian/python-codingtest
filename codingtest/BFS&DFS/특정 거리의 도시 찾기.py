@@ -17,3 +17,12 @@ while queue:
         if visited[i] == -1:
             visited[i] = visited[pop] + 1
             queue.append(i)
+
+ck = False
+for i in range(1, n+1):
+    if visited[i] == k:
+        print(i)
+        ck = True
+
+if not ck:
+    print(-1)
