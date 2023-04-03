@@ -1,9 +1,19 @@
+from collections import deque
+
 n, m, k, x = map(int, input().split())
 graph = [[] for _ in range(n + 1)]
 
-for i in range(m):
+for _ in range(m):
     a, b = map(int, input().split())
     graph[a].append(b)
 
 visited = [-1] * (n + 1)
 visited[x] = 0
+
+queue = deque([x])
+while queue:
+    pop = queue.popleft()
+    for i in graph[pop]:
+        if visited[i] == -1:
+            visited[i] = visited[pop] + 1
+            queue.append(i)
