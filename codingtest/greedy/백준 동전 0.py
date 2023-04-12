@@ -7,7 +7,8 @@ coins.sort(reverse=True)
 result = 0
 
 for coin in coins:
-    result += k // coin
-    k = k % coin
+    if k >= coin:
+        result += k // coin
+        k = k % coin
 
 print(result)
