@@ -1,7 +1,5 @@
-from string import ascii_lowercase
-
 s = str(input())
-alphabet_list = list(ascii_lowercase)
+alphabet_list = 'abcdefghijklmnopqrstuvwxyz'
 
 for alphabet in alphabet_list:
     print(s.find(alphabet), end=' ')
