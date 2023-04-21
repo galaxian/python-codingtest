@@ -1,14 +1,18 @@
-from bisect import bisect_left,bisect_right
-
 n = int(input())
 cards_num = list(map(int, input().split()))
 m = int(input())
 find_num = list(map(int, input().split()))
 
-cards_num.sort()
-result = []
+dicts = {}
 
-for i in range(m):
-    result.append(bisect_right(cards_num, find_num[i]) - bisect_left(cards_num, find_num[i]))
+for num in cards_num:
+    if num in dicts:
+        dicts[num] += 1
+    else:
+        dicts[num] = 1
 
-print(*result)
+for num in find_num:
+    if num in dicts:
+        print(dicts[num], end=' ')
+    else:
+        print(0, end=' ')
