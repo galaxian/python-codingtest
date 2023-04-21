@@ -1,18 +1,14 @@
+from collections import Counter
+
 n = int(input())
 cards_num = list(map(int, input().split()))
 m = int(input())
 find_num = list(map(int, input().split()))
 
-dicts = {}
-
-for num in cards_num:
-    if num in dicts:
-        dicts[num] += 1
-    else:
-        dicts[num] = 1
+cnt = Counter(cards_num)
 
 for num in find_num:
-    if num in dicts:
-        print(dicts[num], end=' ')
+    if num in cnt:
+        print(cnt[num], end=' ')
     else:
         print(0, end=' ')
